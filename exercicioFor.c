@@ -22,13 +22,20 @@ int main(){
 
   // printf("A soma dos numeros de 1 a 50 e igual a: %d\n", soma);
 
-  int num, i;
+  // int num, i;
 
-  printf("Insira um numero para ver a sua tabuada: ");
-  scanf("%d", &num);
+  // printf("Insira um numero para ver a sua tabuada: ");
+  // scanf("%d", &num);
 
-  for(i = 0; i <= 10; i++) {
-    printf("%d x %d = %d\n", num, i, num*i);
+  // for(i = 0; i <= 10; i++) {
+  //   printf("%d x %d = %d\n", num, i, num*i);
+  // }
+
+  int i;
+
+  for(i = 1; i <= 10; i++) {
+    if(i%2 == 0) printf("%d e um numero par!\n", i);
+    else printf("%d e um numero impar!\n", i);
   }
  
   return 0;
