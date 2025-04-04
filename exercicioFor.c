@@ -31,12 +31,31 @@ int main(){
   //   printf("%d x %d = %d\n", num, i, num*i);
   // }
 
-  int i;
+  // int i;
 
-  for(i = 1; i <= 10; i++) {
-    if(i%2 == 0) printf("%d e um numero par!\n", i);
-    else printf("%d e um numero impar!\n", i);
+  // for(i = 1; i <= 10; i++) {
+  //   if(i%2 == 0) printf("%d e um numero par!\n", i);
+  //   else printf("%d e um numero impar!\n", i);
+  // }
+
+  char string[100];
+  char charToCompare;
+
+  int i = 0;
+  int count = 0;
+
+  printf("Digite uma frase: ");
+  fgets(string, sizeof string, stdin);
+
+  printf("\nDigite uma letra para comparacao: ");
+  scanf("%c", &charToCompare);
+
+  while(string[i] != (sizeof string)+1){ // ADICIONANDO UM PQ ELE NN LÊ O ÚLTIMO CHAR (SLA O PQ)
+    if(string[i] == charToCompare) count++;
+    i++;
   }
+
+  printf("Existem %d %c's na frase.", count, charToCompare);
  
   return 0;
 }
