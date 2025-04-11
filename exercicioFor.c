@@ -3,41 +3,7 @@
 #include <stdbool.h>
 
 int main(){
-
-  // for(count = 0; count < 5; count++){
-  //   printf("%d \n", count);
-  // }
-
-  // for(count = 0; count <= 20; count += 2 ) {
-  //   printf("%d\n", count);
-  // }
-
-  // for(count = 3; count >= 0; count--){
-  //   printf("%d\n", count);
-  // }
-
-  // for(i = 1; i <= 100; i++){
-  //   soma += i;
-  // }
-
-  // printf("A soma dos numeros de 1 a 50 e igual a: %d\n", soma);
-
-  // int num, i;
-
-  // printf("Insira um numero para ver a sua tabuada: ");
-  // scanf("%d", &num);
-
-  // for(i = 0; i <= 10; i++) {
-  //   printf("%d x %d = %d\n", num, i, num*i);
-  // }
-
-  // int i;
-
-  // for(i = 1; i <= 10; i++) {
-  //   if(i%2 == 0) printf("%d e um numero par!\n", i);
-  //   else printf("%d e um numero impar!\n", i);
-  // }
-
+  
   char string[100];
   char charToCompare;
 
@@ -45,13 +11,14 @@ int main(){
   int count = 0;
 
   printf("Digite uma frase: ");
-  fgets(string, sizeof string, stdin);
+  fgets(string, sizeof string, stdin); // outra forma de pegar dados do usuário, TEM QUE ESPECIFICAR O TAMANHO!!!!
 
-  printf("\nDigite uma letra para comparacao: ");
+  printf("\nDigite uma letra para contar: ");
   scanf("%c", &charToCompare);
 
-  while(string[i] != (sizeof string)+1){ // ADICIONANDO UM PQ ELE NN LÊ O ÚLTIMO CHAR (SLA O PQ)
+  while(string[i] != '\0'){ // "\0" representa tipo um "último caractere" dentro do array!!!!!
     if(string[i] == charToCompare) count++;
+
     i++;
   }
 
